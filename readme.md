@@ -8,32 +8,59 @@
 ## Installation
 
 ```bash
-
+    npm install t2-puppeteer-plugin-block-resources
 ```
 
 or using Yarn:
 
 ```bash
-
+    yarn add t2-puppeteer-plugin-block-resources
 ```
 
 
-### Usage
-
-```js
-
-
-
-```
 
 
 ### Usage with puppeteer-extra
 
-
-
 ```js
 
+import puppeteerExtra from 'puppeteer-extra';
+import blockResources from 't2-puppeteer-plugin-block-resources';
 
+// | "document"
+// | "stylesheet"
+// | "image"
+// | "media"
+// | "font"
+// | "script"
+// | "texttrack"
+// | "xhr"
+// | "fetch"
+// | "eventsource"
+// | "websocket"
+// | "manifest"
+// | "other"
+
+const bl=blockResources()
+bl.add(['image','media','stylesheet'])
+puppeteerExtra.use(bl);
+
+(async () => {
+  const browser = await puppeteerExtra.launch({
+    headless:false,
+    userDataDir:'./profile'
+  });
+  const page = await browser.newPage();
+
+  await page.setViewport({
+    width: 1920,
+    height: 1080
+});
+
+  await page.goto('https://unsplash.com/')
+
+//   await browser.close();
+})();
 
 ```
 

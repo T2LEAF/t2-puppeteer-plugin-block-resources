@@ -1,7 +1,7 @@
 {
     "name": "t2-puppeteer-plugin-block-resources",
-    "version": "0.0.2",
-    "description": "",
+    "version": "0.0.1",
+    "description": "Blocks unnecessary resources like images, fonts, and stylesheets to optimize performance and speed up page loads.",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "files": [
@@ -12,7 +12,7 @@
         "build": "tsc",
         "dev": "nodemon --exec ts-node src/index.ts",
         "prepare": "yarn  build",
-        "test":"ts-node test"
+        "test": "ts-node test"
     },
     "license": "MIT",
     "engines": {
@@ -21,6 +21,7 @@
     "devDependencies": {
         "nodemon": "^3.0.3",
         "puppeteer": "^24.0.0",
+        "puppeteer-extra": "^3.3.6",
         "ts-node": "^10.9.2",
         "typescript": "^5.3.3"
     },
