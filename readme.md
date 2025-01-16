@@ -48,7 +48,6 @@ puppeteerExtra.use(bl);
 (async () => {
   const browser = await puppeteerExtra.launch({
     headless:false,
-    userDataDir:'./profile'
   });
   const page = await browser.newPage();
 
