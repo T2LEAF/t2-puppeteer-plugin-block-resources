@@ -8,13 +8,13 @@
 ## Installation
 
 ```bash
-    npm install t2-puppeteer-plugin-block-resources
+npm install t2-puppeteer-plugin-block-resources
 ```
 
 or using Yarn:
 
 ```bash
-    yarn add t2-puppeteer-plugin-block-resources
+yarn add t2-puppeteer-plugin-block-resources
 ```
 
 
